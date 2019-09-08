@@ -97,7 +97,8 @@ footer {
   height: 45px;
   line-height: 45px;
 
-  p, ul {
+  p,
+  ul {
     margin-bottom: 0;
   }
 }
@@ -119,8 +120,8 @@ textarea {
 }
 
 .navbar{
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
   margin-bottom: 20px;
   display: block;
 }
@@ -150,6 +151,7 @@ textarea {
 * Solves Bootstrap 4 issue
 * https://github.com/twbs/bootstrap/issues/25654
 */
+
 /* Styles in sm disposition and up */
 @media (min-width: 576px) and (max-width: 767px) {
   /* Solves bs4 bug */
@@ -220,7 +222,8 @@ textarea {
   background-color: #fffc00;
   color: #000 !important;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: #f1ef00;
   }
 }

@@ -4,9 +4,7 @@
 {% set menu_active = 'demo-page' %}
 
 {% block page %}
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/dracula.min.css">
-
     <style>
         /* Inline styling for the demo purpose */
         pre {
@@ -56,20 +54,17 @@
             background-color: #f2f2f2;
         }
     </style>
+    {% include '../components/navbar.twig' %}
+    <div class="container">
+        Here goes content.
+    </div>
 
     <div class="container px-4">
-
         <div class="demo">
-
             <div class="demo-content py-4">
-
-
                 <div class="flex flex-wrap -mx-2 mb-4">
-
                     <div class="w-full px-2">
-
                         <div class="bg-white p-4 section">
-
                             <h2 class="h4 mb-4 text-black">
                                 Hybrid Utility ITCSS
                             </h2>
@@ -82,20 +77,13 @@
                             <p class="font-size-sm mb-0">
                                 Based on best pieces from Bootstrap, Tailwind CSS and years of experience.
                             </p>
-
                         </div>
-
                     </div>
-
                 </div>
 
-
                 <div class="flex flex-wrap -mx-2 mb-8 font-size-xs">
-
                     <div class="w-full md:w-1/2 px-2">
-
                         <div class="bg-white p-4 mb-4 section hidden">
-
                             <h2 class="h3 mb-4 text-black">
                                 Hybrid Utility ITCSS
                             </h2>
@@ -1813,17 +1801,12 @@ body {
                                 Github
                             </a>
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
+    {% include '../components/footer.twig' %}
     <!-- https://highlightjs.org/ -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/languages/scss.min.js"></script>
@@ -1834,48 +1817,47 @@ body {
       https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/
     -->
     <script>
-        // Show an element
-        var show = function (elem) {
-            elem.style.display = 'block';
-        };
+      // Show an element
+      var show = function (elem) {
+        elem.style.display = 'block';
+      };
 
-        // Hide an element
-        var hide = function (elem) {
-            elem.style.display = 'none';
-        };
+      // Hide an element
+      var hide = function (elem) {
+        elem.style.display = 'none';
+      };
 
-        // Toggle element visibility
-        var toggle = function (elem) {
+      // Toggle element visibility
+      var toggle = function (elem) {
 
-            // If the element is visible, hide it
-            if (window.getComputedStyle(elem).display === 'block') {
-                hide(elem);
-                return;
-            }
+        // If the element is visible, hide it
+        if (window.getComputedStyle(elem).display === 'block') {
+          hide(elem);
+          return;
+        }
 
-            // Otherwise, show it
-            show(elem);
+        // Otherwise, show it
+        show(elem);
 
-        };
+      };
 
-        // Listen for click events
-        document.addEventListener('click', function (event) {
+      // Listen for click events
+      document.addEventListener('click', function (event) {
 
-            // Make sure clicked element is our toggle
-            if (!event.target.classList.contains('toggle')) return;
+        // Make sure clicked element is our toggle
+        if (!event.target.classList.contains('toggle')) return;
 
-            // Prevent default link behavior
-            event.preventDefault();
+        // Prevent default link behavior
+        event.preventDefault();
 
-            // Get the content
-            var content = document.querySelector(event.target.hash);
-            if (!content) return;
+        // Get the content
+        var content = document.querySelector(event.target.hash);
+        if (!content) return;
 
-            // Toggle the content
-            toggle(content);
-            event.target.classList.toggle('toggled');
+        // Toggle the content
+        toggle(content);
+        event.target.classList.toggle('toggled');
 
-        }, false);
+      }, false);
     </script>
-
 {% endblock %}

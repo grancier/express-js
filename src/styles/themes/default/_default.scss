@@ -16,9 +16,12 @@
   box-shadow: none;
 }
 
-.btn-raised, .btn-raised:focus, .btn-raised:active, .btn-raised:hover {
+.btn-raised,
+.btn-raised:focus,
+.btn-raised:active,
+.btn-raised:hover {
   color: rgb(51, 51, 51);
-  background-image: linear-gradient(to bottom, #ffffff 60%, #f8f8f8 100%);
+  background-image: linear-gradient(to bottom, #fff 60%, #f8f8f8 100%);
   border-color: rgb(204, 204, 204);
 }
 
@@ -34,7 +37,7 @@
 
 .alert {
   border-radius: 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 // Navbar
@@ -43,7 +46,7 @@
 .navbar-light {
   border: 0;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  background: #ffffff;
+  background: #fff;
   opacity: 0.9;
   .navbar-nav {
     > li > a {
@@ -68,7 +71,7 @@
   }
   .navbar-toggler {
     border-bottom-color: rgb(221, 221, 221);
-    color: rgb(51,51,51);
+    color: rgb(51, 51, 51);
   }
   .navbar-toggler:focus {
     background: rgb(221, 221, 221);
@@ -80,7 +83,7 @@
 }
 
 .navbar-toggler-icon {
-  color: rgb(51,51,51);
+  color: rgb(51, 51, 51);
 }
 
 .dropdown-item {

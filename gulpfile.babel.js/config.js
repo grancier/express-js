@@ -20,12 +20,6 @@ export const paths = {
     modules: 'src/modules/**/*.js',
     dest: 'dist/js',
   },
-  templates: {
-    src: 'src/templates/pages/*.{twig,html}',
-    watch: 'src/templates/**/*.{twig,html}',
-    modules: 'src/modules/**/*.{twig,html}',
-    dest: 'dist/'
-  },
   assets: {
     src: 'src/assets/**/*',
     dest: 'dist/assets'
