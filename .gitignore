@@ -17,13 +17,7 @@ tmp
 .npm
 
 #Build
-public/css/main.css
 .nyc_output/*
-
-#Libraries from npm packages
-public/js/lib/bootstrap.min*
-public/js/lib/jquery.min*
-public/js/lib/popper.min*
 
 # API keys and secrets
 .env
@@ -55,3 +49,34 @@ Thumbs.db
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+# Dependency directories
+node_modules
+bower_components
+dist
+public
+
+# Optional npm cache directory
+.npm
+
+# SASS Cache
+.sass-cache
+.sass-cache/*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OSX
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Misc
+.publish
+~                                                                                                                                      
