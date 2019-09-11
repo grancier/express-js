@@ -1,0 +1,67 @@
+{% extends '../layouts/default.twig' %}
+{% block page %}
+    <!-- Default form login -->
+    <div class="pb-2 mt-2 mb-4 border-bottom">
+        <h3 class="h4 mb-4">Sign in</h3>
+        <form method='POST' class="text-center border border-light p-5" action="#!">
+            <input type='hidden' name='_csrf' value=_csrf>
+
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label font-weight-bold text-right" for='email'>Email</label>
+                <div class="col-md-7">
+                    <!-- Email -->
+                    <input type='email' name='email' id='email' placeholder='Email' autofocus autocomplete='email' ,
+                           required
+                           type="email" class="form-control mb-4">
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label font-weight-bold text-right" for='password'>Password</label>
+                <div class="col-md-7">
+            <input type='password' name='password' id='password' autocomplete='current-password' required
+                   class="form-control mb-4" placeholder="Password">
+                </div>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <!-- Remember me -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                        <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                    </div>
+                </div>
+                <div>
+                    <!-- Forgot password -->
+                    <a href="/forgot">Forgot password?</a>
+                </div>
+            </div>
+
+            <!-- Sign in button -->
+            <button class="col-md-3 btn-primary btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+            <!-- Register -->
+            <p>Not a member?
+                <a href="">Register</a>
+            </p>
+
+            <!-- Social login -->
+            <p>or sign in with:</p>
+
+            <a type="button" class="light-blue-text mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a type="button" class="light-blue-text mx-2">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a type="button" class="light-blue-text mx-2">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a type="button" class="light-blue-text mx-2">
+                <i class="fab fa-github"></i>
+            </a>
+
+        </form>
+    </div>
+{% endblock %}
+<!-- Default form login -->

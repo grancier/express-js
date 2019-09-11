@@ -1,0 +1,60 @@
+{% extends '../layouts/default.twig' %}
+{% block page %}
+    <div class="pb-2 mt-2 mb-4 border-bottom">
+        <h3>SIgnup</h3>
+        <form id='signup-form' method='POST'>
+            <input type='hidden' name='_csrf' value=_csrf>
+            <p class="pb-4">Enter your email address below and we will send you password reset instructions.</p>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label font-weight-bold text-right" for='email'>Email</label>
+                <div class="col-md-7">
+                    <input class="form-control" type='email' name='email' id='email' placeholder='Email' autofocus
+                           autocomplete='email' required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label font-weight-bold text-right" for='password'>Password</label>
+                <div class="col-md-7">
+                    <input class="form-control" type='password' name='password' id='password' placeholder='Password'
+                           autocomplete='new-password' required>
+                </div>
+            </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label font-weight-bold text-right" for='confirmPassword'>Confirm Password</label>
+            <div class="col-md-7">
+              <input class="form-control" type='password' name='confirmPassword' id='confirmPassword' placeholder='Confirm Password' autocomplete='new-password' required>
+            </div>
+          </div>
+            <div class="form-group offset-sm-3 col-md-7 pl-2">
+                <button class="btn btn-primary" type='submit'>
+                    <i class="fas fa-key fa-sm"> | Reset Password</i>
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+
+extends ../../../views/layout
+
+block content
+.pb-2.mt-2.mb-4.border-bottom
+h3 Sign up
+form(, method='POST')
+input(type='hidden', name='_csrf', value=_csrf)
+.form-group.row
+label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
+.col-md-7
+input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, autocomplete='email', required)
+.form-group.row
+label.col-md-3.col-form-label.font-weight-bold.text-right(for='password') Password
+.col-md-7
+input.form-control(type='password', name='password', id='password', placeholder='Password', autocomplete='new-password', required)
+.form-group.row
+label.col-md-3.col-form-label.font-weight-bold.text-right(
+.col-md-7
+input.form-control()
+.form-group.offset-sm-3.col-md-7.pl-2
+button.btn.btn-success(type='submit')
+i.fas.fa-user-plus.fa-sm
+| Signup
